@@ -1,0 +1,147 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+	background-color: brown;
+	height:10vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+header h1{
+	color: white;
+	font-size: 2rem;
+	letter-spacing: .7rem;
+}
+nav ul{
+	display: flex;
+}
+nav ul li{
+	border-right: solid ,1rem rgba(8, 0, 0, 0.41);
+}
+nav ul li:last-child{
+	border-right: none;
+}
+nav ul li a{
+	color: white;
+	font-size: 1.2rem;
+	padding: .8rem 1rem;
+	text-transform: uppercase;
+}
+nav ul li a:hover{
+	background-color: gray;
+	transition: all .3s;
+}
+.drawer{
+	color: white;
+	float: left;
+	cursor: pointer;
+	display: none;
+	margin-left: 1rem;
+	border: solid .1rem white;
+	padding: .2rem;
+	border-radius: .1rem;
+}
+#ckbox{
+	display: none;
+}
+/*estilos de la sesion principal*/
+
+main{
+	padding-top: 1rem;
+	display: flex;
+	justify-content: center;
+	height: 80vh;
+}
+main h1{
+	font-size: 1.7rem;
+	color: black;
+	text-align: center;
+	margin: 1rem;
+}
+.formulario{
+	position: absolute;
+	border: 1rem;
+	z-index: auto;
+
+}
+.primary-btn{
+	background-color: brown;
+	color: white;
+	border-style: none;
+}
+.outline-btn{
+	background-color: white;
+	color: brown;
+	border: solid .1rem brown;
+}
+.primary-btn:hover{
+	background-color: white;
+	color: brown;
+	border: solid .1rem brown;
+	transition: all .3s;
+}
+.outline-btn:hover{
+	background-color: brown;
+	color: white;
+	border-style: none;
+	transition: all .3s;
+}
+main img{
+	height: 70vh;
+}
+footer{
+	background-color: brown;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 10vh;
+}
+@media(max-width:1020px){
+	nav{
+		justify-content: flex-start;
+	}
+	.drawer{
+		display: block;
+	}
+	nav h1{
+		margin-left: 1rem;
+	}
+	ul{
+		position: fixed;
+		width: 50%;
+		height: 100vh;
+		background-color: rgb(22, 20, 20);
+		top: 10vh;
+		left: -100%;
+		text-align: left;
+		transition: all .5s;
+		display: flex;
+		flex-direction: column;
+		align-content: stretch;
+	}
+	nav ul li{
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		padding-left: 2rem;
+		border-bottom: solid .1rem gray;
+	}
+	#ckbox:checked ~ .menu-box{
+		left: 0%;
+	} 
+	.img{
+		width: 100%;
+		height: auto;
+	}
+}
